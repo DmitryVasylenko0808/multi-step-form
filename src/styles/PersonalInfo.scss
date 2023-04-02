@@ -1,0 +1,396 @@
+@import "colors.scss";
+
+.form {
+    width: 450px;
+    height: 558px;
+    margin: 0 100px;
+
+    box-sizing: border-box;
+    padding: 45px 0 20px 0;
+
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
+
+    .desc {
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        margin: 0;
+
+        color: $Marine_blue;
+
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: $Cool_gray;
+    }
+
+    form {
+        height: 382px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .labels {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+        }
+
+        label {
+            color: $Marine_blue;
+        }
+
+        .error {
+            color: $Strawberry_red;
+        }
+
+        .text {
+            width: 100%;
+            box-sizing: border-box;
+
+            margin-bottom: 20px;
+            padding: 12px;
+
+            display: block;
+
+            border: 1px solid hsl(0deg 0% 86.61%);
+            border-radius: 5px;
+
+            color: $Marine_blue !important;
+
+            font-size: 16px;
+            font-family: 'Ubuntu';
+
+            &:focus-visible {
+                outline: 0;
+                border: 1px solid $Purplish_blue;
+            }
+        }
+
+        .error--input {
+            border: 1px solid $Strawberry_red;
+        }
+
+        .check--container {
+            padding: 10px 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: $Magnolia;
+
+            label {
+                color: $Cool_gray;
+            }
+
+            .selected {
+                color: $Marine_blue;
+            }
+        }
+
+        .check--container--mg {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// SelectPlan
+
+.switch--theme {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 16px;
+    margin: 0 14px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $Marine_blue;
+        transition: all .3s;
+
+        border-radius: 20px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 11px;
+            width: 11px;
+            left: 4px;
+            bottom: 3px;
+            background-color: $whiteColor;
+            transition: all .3s;
+
+            border-radius: 50%;
+        }
+    }
+
+    input:checked+.slider::before {
+        transform: translateX(16px);
+    }
+}
+
+.cards {
+    display: flex;
+
+    column-gap: 15px;
+}
+
+.card {
+    width: 120px;
+
+    padding: 18px 10px 15px 15px;
+
+    border: 1px solid hsl(0deg 0% 86.61%);
+    border-radius: 8px;
+
+    .title {
+        margin: 45px 0 2px 0;
+        color: $Marine_blue;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .free {
+        margin-top: 9px;
+
+        font-size: 13px;
+        color: $Marine_blue;
+    }
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid $Purplish_blue;
+    }
+}
+
+.card-selected {
+    border-color: $Purplish_blue;
+
+    background-color: $Magnolia;
+}
+
+.ico {
+    width: 40px;
+    height: 40px;
+}
+
+
+// AddOns
+
+.service--cards {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 15px;
+}
+
+.card--service {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .service {
+        display: flex;
+    }
+
+    .title {
+        margin: 0;
+    }
+}
+
+.price {
+    color: $Purplish_blue;
+}
+
+.check--container {
+    margin-right: 40px;
+    position: relative;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        height: 18px;
+        width: 18px;
+
+        border: 0.4px solid hsl(0deg 0% 86.61%);
+        border-radius: 4px;
+        background-color: $whiteColor;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+
+            left: 6px;
+            top: 2px;
+            width: 4px;
+            height: 8px;
+            border: solid #ffffff;
+            border-width: 0 3px 3px 0px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &:hover input~.checkmark {
+        background-color: hsl(0deg 0% 86.61%);
+    }
+
+    input:checked~.checkmark {
+        border-color: $Purplish_blue;
+
+        background-color: $Purplish_blue;
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+}
+
+
+// Summary
+
+
+.block {
+    padding: 15px 25px;
+
+    background-color: $Magnolia;
+
+    span {
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+            color: $Purplish_blue;
+        }
+    }
+
+    span, hr {
+        color: $Cool_gray;
+    }
+
+    hr {
+        margin-top: 23px;
+    }
+}
+
+.info--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 0;
+    }
+
+    .title, .price {
+        font-family: 'Ubuntu-Bold', sans-serif;
+
+        color: $Marine_blue;
+    }
+}
+
+.serv {
+    margin-top: 15px;
+
+    .price {
+        font-family: 'Ubuntu', sans-serif;
+        color: $Marine_blue;
+    }
+}
+
+.regular {
+    font-family: 'Ubuntu-Regular', sans-serif;
+}
+
+.total--block {
+    margin-top: 10px;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 0;
+    }
+
+    .price {
+        font-family: 'Ubuntu-Bold', sans-serif;
+        font-size: 22px;
+
+        color: $Purplish_blue;
+    }
+}
+
+.buttons--container {
+    display: flex;
+    justify-content: space-between;
+}
+
+// thank you
+
+.thanks {
+    width: 450px;
+    height: 558px;
+    margin: 5px 100px 5px 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 0;
+        
+        color: $Marine_blue;
+    }
+
+    p {
+        text-align: center;
+
+        color: $Cool_gray;
+    }
+}
+
+.thanks--img {
+    width: 80px;
+    height: 80px;
+
+    background-image: url('../assets/images/icon-thank-you.svg');
+}

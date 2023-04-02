@@ -1,0 +1,47 @@
+@import "colors.scss";
+
+.step {
+    display: flex;
+
+    margin: 0 0 35px 25px;
+
+    &:first-child {
+        margin-top: 45px;
+    }
+
+    div + div {
+        margin-left: 15px;
+    }
+}
+
+.step-info {
+    span {
+        font-family: 'Ubuntu-Regular', sans-serif;
+        font-weight: 400;
+
+        color: hsl(228, 100%, 84%);
+    }
+    p {
+        margin: 3px 0 0 0 ;
+
+        letter-spacing: 1px;
+    }
+}
+
+.circle {
+    padding: 10px 15px;
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+
+.active {
+    .circle {
+        background-color: $activeColor;
+        border-color: $activeColor;
+
+        color: $purplishColor;
+
+        font-family: 'Ubuntu-Bold', sans-serif;
+    }
+}

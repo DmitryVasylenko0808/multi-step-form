@@ -1,0 +1,10 @@
+@import "colors.scss";
+
+.sidebar {
+    width: 274px;
+    height: 568px;
+
+    background-image: url("../assets/images/bg-sidebar-desktop.svg");
+
+    color: $whiteColor;
+}

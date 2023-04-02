@@ -1,0 +1,15 @@
+@import "ubuntu.scss";
+@import "colors.scss";
+
+.form--container {
+    padding: 15px;
+
+    display: flex;
+
+    border-radius: 10px;
+
+    background-color: $whiteColor;
+}
+
+
+

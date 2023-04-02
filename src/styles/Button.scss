@@ -1,0 +1,51 @@
+@import "colors.scss";
+
+.default {
+    padding: 10px 20px;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+
+    
+}
+
+.back {
+    padding: 0;
+
+    color: $Cool_gray;
+
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+
+    &:hover {
+        cursor: pointer;
+        color: $Marine_blue;
+    }
+}
+
+.next {
+    color: $White;
+    background-color: $Marine_blue;
+    border-color: $Marine_blue;
+
+    &:hover {
+        cursor: pointer;
+        background-color: hsl(213, 99%, 30%);
+    }
+}
+
+.confirm {
+    color: $White;
+    background-color: $Purplish_blue;
+    border-color: $Purplish_blue;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
